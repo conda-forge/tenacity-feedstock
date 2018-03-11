@@ -1,6 +1,6 @@
 {% set name = "tenacity" %}
-{% set version = "4.8.0" %}
-{% set sha256 = "f144a1cdbef3ca2f8a08ead74864d4fc26ea31c64806ca8ae030acb652629d9d" %}
+{% set version = "4.9.0" %}
+{% set sha256 = "b53f3be7d5507d05910636acbde863d83e78845ff78e4e812dba38ffee69af84" %}
 
 package:
   name: {{ name|lower }}
