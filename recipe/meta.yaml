@@ -23,7 +23,7 @@ requirements:
   run:
     - python
     - futures >=3  # [py27]
-    - monotonic >=0.6
+    - monotonic >=0.6  # [py27]
     - six >=1.9.0
 
 test:
