@@ -16,14 +16,16 @@ adding retry behavior to just about anything. It originates from a fork of Retry
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/tenacity-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/tenacity-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/tenacity-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/tenacity-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/tenacity-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/tenacity-feedstock/branch/master)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/tenacity-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/tenacity-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/tenacity-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/tenacity-feedstock)
+[![Windows](https://img.shields.io/appveyor/ci/conda-forge/tenacity-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/tenacity-feedstock/branch/master)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/tenacity/badges/version.svg)](https://anaconda.org/conda-forge/tenacity)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/tenacity/badges/downloads.svg)](https://anaconda.org/conda-forge/tenacity)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-tenacity-green.svg)](https://anaconda.org/conda-forge/tenacity) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/tenacity.svg)](https://anaconda.org/conda-forge/tenacity) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/tenacity.svg)](https://anaconda.org/conda-forge/tenacity) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/tenacity.svg)](https://anaconda.org/conda-forge/tenacity) |
 
 Installing tenacity
 ===================
