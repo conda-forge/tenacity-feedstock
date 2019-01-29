@@ -1,6 +1,6 @@
 {% set name = "tenacity" %}
-{% set version = "5.0.2" %}
-{% set sha256 = "4c10be4f8fbeb1cae24b9315103d8aca3f2b1ef001d455cbb1671d3d79924be6" %}
+{% set version = "5.0.3" %}
+{% set sha256 = "24b7f302a1caa1801e58b39ea557129c095966e64e5b1ddad3c93a6cb033e38b" %}
 
 package:
   name: {{ name|lower }}
@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1000
+  number: 0
   script: python setup.py install --single-version-externally-managed --record record.txt
 
 requirements:
