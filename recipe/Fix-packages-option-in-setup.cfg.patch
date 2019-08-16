@@ -1,0 +1,37 @@
+From 2775f13b34b3ec67a774061a77fcd4e1e9b4157c Mon Sep 17 00:00:00 2001
+From: Julien Danjou <julien@danjou.info>
+Date: Fri, 16 Aug 2019 10:45:16 +0200
+Subject: [PATCH] Fix packages option in setup.cfg
+
+This was broken with pbr removal.
+
+Fixes #190
+---
+ setup.cfg | 4 +---
+ 1 file changed, 1 insertion(+), 3 deletions(-)
+
+diff --git a/setup.cfg b/setup.cfg
+index 6487fa3..f1b6355 100644
+--- a/setup.cfg
++++ b/setup.cfg
+@@ -26,6 +26,7 @@ install_requires =
+     six>=1.9.0
+     futures>=3.0;python_version=='2.7'
+     monotonic>=0.6;python_version=='2.7'
++packages = tenacity
+ 
+ [options.extras_require]
+ doc =
+@@ -33,9 +34,6 @@ doc =
+     sphinx
+     tornado>=4.5
+ 
+-[files]
+-packages = tenacity
+-
+ [wheel]
+ universal = 1
+ 
+-- 
+2.22.0
+

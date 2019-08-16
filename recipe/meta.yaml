@@ -1,6 +1,6 @@
 {% set name = "tenacity" %}
-{% set version = "4.12.0" %}
-{% set sha256 = "dcd7646fe731b21b73870ead85a965a4202abeaf56e0588e6a8b38375110098f" %}
+{% set version = "5.1.0" %}
+{% set sha256 = "acfe44a4e0c8367f33f8fc74afa4a37e087c595c1889bd698a45754ad981f81b" %}
 
 package:
   name: {{ name|lower }}
@@ -10,16 +10,20 @@ source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
+  patches:
+    - Fix-packages-option-in-setup.cfg.patch
 
 build:
-  number: 1
+  number: 0
   script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
-  build:
+  host:
     - python
     - pbr
     - pip
+    - setuptools
+    - setuptools_scm
   run:
     - python
     - futures >=3  # [py27]
