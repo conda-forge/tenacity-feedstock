@@ -1,6 +1,6 @@
 {% set name = "tenacity" %}
-{% set version = "6.0.0" %}
-{% set sha256 = "72f397c2bb1887e048726603f3f629ea16f88cb3e61e4ed3c57e98582b8e3571" %}
+{% set version = "4.12.0" %}
+{% set sha256 = "dcd7646fe731b21b73870ead85a965a4202abeaf56e0588e6a8b38375110098f" %}
 
 package:
   name: {{ name|lower }}
@@ -19,9 +19,7 @@ requirements:
   host:
     - python
     - pbr
-    - pip
     - setuptools
-    - setuptools_scm
   run:
     - python
     - futures >=3  # [py27]
