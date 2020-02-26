@@ -1,6 +1,6 @@
 {% set name = "tenacity" %}
-{% set version = "6.0.0" %}
-{% set sha256 = "72f397c2bb1887e048726603f3f629ea16f88cb3e61e4ed3c57e98582b8e3571" %}
+{% set version = "6.1.0" %}
+{% set sha256 = "fb01d8ef2474eed422d8314a566c9e391cccb6e50cf4585022add6cb5cda66c8" %}
 
 package:
   name: {{ name|lower }}
@@ -13,7 +13,7 @@ source:
 
 build:
   number: 0
-  script: "{{ PYTHON }} -m pip install -vv ."
+  script: {{ PYTHON }} -m pip install -vv .
 
 requirements:
   host:
@@ -36,7 +36,7 @@ about:
   home: http://github.com/jd/tenacity
   license: Apache 2.0
   license_file: LICENSE
-  summary: 'Retry a flaky function whenever an exception occurs until it works'
+  summary: Retry a flaky function whenever an exception occurs until it works
 
   description: |
     Tenacity is general-purpose retrying library, written in Python, to simplify the task of
