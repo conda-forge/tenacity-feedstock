@@ -26,6 +26,7 @@ requirements:
     - python
     - futures >=3  # [py27]
     - monotonic >=0.6  # [py27]
+    - typing >=3.7.4.1  # [py27]
     - six >=1.9.0
 
 test:
@@ -34,7 +35,7 @@ test:
 
 about:
   home: http://github.com/jd/tenacity
-  license: Apache 2.0
+  license: Apache-2.0
   license_file: LICENSE
   summary: Retry a flaky function whenever an exception occurs until it works
 
