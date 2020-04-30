@@ -1,6 +1,6 @@
 {% set name = "tenacity" %}
-{% set version = "6.1.0" %}
-{% set sha256 = "fb01d8ef2474eed422d8314a566c9e391cccb6e50cf4585022add6cb5cda66c8" %}
+{% set version = "6.2.0" %}
+{% set sha256 = "29ae90e7faf488a8628432154bb34ace1cca58244c6ea399fd33f066ac71339a" %}
 
 package:
   name: {{ name|lower }}
@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install -vv .
 
 requirements:
