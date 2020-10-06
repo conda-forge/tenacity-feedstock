@@ -12,21 +12,19 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install -vv .
+  noarch: python
 
 requirements:
   host:
-    - python
+    - python >=3
     - pbr
     - pip
     - setuptools
     - setuptools_scm
   run:
-    - python
-    - futures >=3  # [py27]
-    - monotonic >=0.6  # [py27]
-    - typing >=3.7.4.1  # [py27]
+    - python >=3
     - six >=1.9.0
 
 test:
