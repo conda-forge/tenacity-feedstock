@@ -5,9 +5,13 @@ Home: http://github.com/jd/tenacity
 
 Package license: Apache-2.0
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/tenacity-feedstock/blob/master/LICENSE.txt)
 
 Summary: Retry a flaky function whenever an exception occurs until it works
+
+Development: http://github.com/jd/tenacity
+
+Documentation: http://tenacity.readthedocs.io
 
 Tenacity is general-purpose retrying library, written in Python, to simplify the task of
 adding retry behavior to just about anything. It originates from a fork of Retrying
