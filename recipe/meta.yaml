@@ -1,5 +1,5 @@
 {% set name = "tenacity" %}
-{% set version = "8.2.0" %}
+{% set version = "8.2.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/tenacity-{{ version }}.tar.gz
-  sha256: a43bcd8910406e0884ca0db3db7bed581f389c1d05165e992a1ddabfc81df05e
+  sha256: c7bb4b86425b977726a7b49971542d4f67baf72096597d283f3ffd01f33b92df
 
 build:
   number: 0
