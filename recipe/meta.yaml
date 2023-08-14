@@ -1,5 +1,5 @@
 {% set name = "tenacity" %}
-{% set version = "8.2.2" %}
+{% set version = "8.2.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/tenacity-{{ version }}.tar.gz
-  sha256: 43af037822bd0029025877f3b2d97cc4d7bb0c2991000a3d59d71517c5c969e0
+  sha256: 5398ef0d78e63f40007c1fb4c0bff96e1911394d2fa8d194f77619c05ff6cc8a
 
 build:
   number: 0
@@ -16,12 +16,12 @@ build:
 
 requirements:
   host:
-    - python >=3.6
+    - python >=3.7
+    - setuptools >=21.0.0,!=24.0.0,!=34.0.0,!=34.0.1,!=34.0.2,!=34.0.3,!=34.1.0,!=34.1.1,!=34.2.0,!=34.3.0,!=34.3.1,!=34.3.2,!=36.2.0
+    - setuptools-scm >=3.4
     - pip
-    - setuptools
-    - setuptools_scm
   run:
-    - python >=3.6
+    - python >=3.7
 
 test:
   requires:
