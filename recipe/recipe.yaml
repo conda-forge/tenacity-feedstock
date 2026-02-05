@@ -1,48 +1,53 @@
-{% set name = "tenacity" %}
-{% set version = "9.1.3" %}
+schema_version: 1
+
+context:
+  name: tenacity
+  version: 9.1.3
 
 package:
-  name: {{ name|lower }}
-  version: {{ version }}
+  name: ${{ name|lower }}
+  version: ${{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/tenacity-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/tenacity-${{ version }}.tar.gz
   sha256: a6724c947aa717087e2531f883bde5c9188f603f6669a9b8d54eb998e604c12a
 
 build:
-  number: 0
-  script: {{ PYTHON }} -m pip install -vv .
+  number: 1
   noarch: python
+  script: ${{ PYTHON }} -m pip install -vv .
 
 requirements:
   host:
-    - python {{ python_min }}
+    - python ${{ python_min }}.*
     - setuptools >=21.0.0,!=24.0.0,!=34.0.0,!=34.0.1,!=34.0.2,!=34.0.3,!=34.1.0,!=34.1.1,!=34.2.0,!=34.3.0,!=34.3.1,!=34.3.2,!=36.2.0
     - setuptools-scm >=3.4
     - pip
   run:
-    - python >={{ python_min }}
+    - python >=${{ python_min }}
 
-test:
-  requires:
-    - pip
-    - python {{ python_min }}
-  commands:
-    - pip check
-  imports:
-    - tenacity
+tests:
+  - python:
+      imports:
+        - tenacity
+      python_version: ${{ python_min }}.*
+  - requirements:
+      run:
+        - pip
+        - python ${{ python_min }}.*
+    script:
+      - pip check
 
 about:
-  home: http://github.com/jd/tenacity
   license: Apache-2.0
   license_file: LICENSE
   summary: Retry a flaky function whenever an exception occurs until it works
-
   description: |
     Tenacity is general-purpose retrying library, written in Python, to simplify the task of
     adding retry behavior to just about anything. It originates from a fork of Retrying
-  doc_url: http://tenacity.readthedocs.io
-  dev_url: http://github.com/jd/tenacity
+  homepage: http://github.com/jd/tenacity
+  repository: http://github.com/jd/tenacity
+  documentation: http://tenacity.readthedocs.io
 
 extra:
   recipe-maintainers:
