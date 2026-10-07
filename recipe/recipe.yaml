@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: tenacity
-  version: "9.1.4"
+  version: "9.2.1"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/tenacity-${{ version }}.tar.gz
-  sha256: adb31d4c263f2bd041081ab33b498309a57c77f9acf2db65aadf0898179cf93a
+  sha256: a606b5c808d0cded4a359d5b9932d867ff2a6a6b64d37350260fd01bbdf83839
 
 build:
   number: 0
